@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "rizzsaver",
+  "version": "1.0-SNAPSHOT",
+  "name": "rizzsaver",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "unlicense",
+  "icon": "assets/rizzsaver/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "shroob.ohio.rizzsaver.client.RizzsaverClient"
+    ],
+    "main": [
+      "shroob.ohio.rizzsaver.Rizzsaver"
+    ]
+  },
+  "mixins": [
+    "rizzsaver.mixins.json",
+    {
+      "config": "rizzsaver.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.4",
+    "fabric": "*",
+    "minecraft": "1.21.1"
+  }
+}
